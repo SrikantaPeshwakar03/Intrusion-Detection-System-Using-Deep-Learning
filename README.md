@@ -25,6 +25,12 @@ It conitains an Input layer of 64 units of ReLU activation. Two Hidden Layers wi
 ##### Hidden layers: 3 fully connected layers with 64, 32, and 16 units (ReLU activation) and 50% dropout.
 ##### Output layer: Softmax activation with a number of neurons equal to the number of classes in the dataset.
 
+#### Training:
+
+##### Loss function: Categorical Crossentropy.
+##### Optimizer: Adam.
+##### Metrics: Accuracy.
+
 ### RNN Model 
 The Recurrent Neural Network (RNN) model is built using LSTM (Long Short-Term Memory) units to capture temporal dependencies in the data. Dropout regularization is also applied to the LSTM layers.
 #### Architecture:
@@ -33,3 +39,9 @@ The Recurrent Neural Network (RNN) model is built using LSTM (Long Short-Term Me
 ##### Hidden layer: LSTM with 32 units and 50% dropout.
 ##### Fully connected layer: 16 units (ReLU activation).
 ##### Output layer: Softmax activation with a number of neurons equal to the number of classes in the dataset.
+
+#### Training:
+
+##### Loss function: Categorical Crossentropy.
+##### Optimizer: Adam.
+##### Metrics: Accuracy.
