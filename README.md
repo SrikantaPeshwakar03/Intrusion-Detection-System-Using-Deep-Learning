@@ -8,15 +8,15 @@ It uses both Deep Neural Networks (DNN) and Recurrent Neural Networks (RNN) to c
 ### 2.Models
 ### 3.Evaluation Metrics
 
-## Dataset
+## Dataset:
 We use the KDD Cup 1999 dataset for building the intrusion detection system. The dataset is available in compressed format (kddcup.data_10_percent.gz). This dataset contains network traffic data labeled into different categories: normal and various attack types such as DOS attacks, probe attacks, etc.
 ### Features and Target Labels:
 #### 1.Features: The dataset has 41 features representing various attributes of network connections.
 #### 2.Target Labels: The target labels consist of different types of attacks and normal traffic.
 For this project, the data is loaded and preprocessed to a suitable format for the neural networks.
 
-## Models
-### DNN Model
+## Models:
+### DNN Model:
 The Deep Neural Network (DNN) model is a feedforward network with multiple hidden layers. Dropout regularization is applied after each hidden layer to improve generalization and avoid overfitting.
 It conitains an Input layer of 64 units of ReLU activation. Two Hidden Layers with 64, 32, and 16 units (ReLU activation) and an Output layer of Softmax activation with a number of neurons equal to the number of classes in the dataset.
 #### Architecture:
@@ -31,7 +31,7 @@ It conitains an Input layer of 64 units of ReLU activation. Two Hidden Layers wi
 ##### Optimizer: Adam.
 ##### Metrics: Accuracy.
 
-### RNN Model 
+### RNN Model:
 The Recurrent Neural Network (RNN) model is built using LSTM (Long Short-Term Memory) units to capture temporal dependencies in the data. Dropout regularization is also applied to the LSTM layers.
 #### Architecture:
 
@@ -45,3 +45,12 @@ The Recurrent Neural Network (RNN) model is built using LSTM (Long Short-Term Me
 ##### Loss function: Categorical Crossentropy.
 ##### Optimizer: Adam.
 ##### Metrics: Accuracy.
+
+### Ensemble Model:
+The ensemble model combines the predictions of both the DNN and RNN models by averaging their predicted probabilities (soft voting). The final class label is determined by selecting the class with the highest averaged probability.
+
+## Evaluation Metrics:
+### F1 Score:
+The F1 score is calculated for each model and the ensemble model. It is the harmonic mean of precision and recall and is especially useful for imbalanced datasets like KDD Cup 1999.
+### Confusion Matrix:
+The confusion matrix is used to visualize the classification results of each model. It provides insight into which classes the model is correctly predicting and where it is making mistakes.
