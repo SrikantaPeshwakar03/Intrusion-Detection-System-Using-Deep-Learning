@@ -8,3 +8,8 @@ It uses both Deep Neural Networks (DNN) and Recurrent Neural Networks (RNN) to c
 ### 2.Models
 ### 3.Evaluation Metrics
 
+## Dataset
+We use the KDD Cup 1999 dataset for building the intrusion detection system. The dataset is available in compressed format (kddcup.data_10_percent.gz). This dataset contains network traffic data labeled into different categories: normal and various attack types such as DOS attacks, probe attacks, etc.
+### Features and Target Labels:
+#### 1.Features: The dataset has 41 features representing various attributes of network connections.
+#### 2.Target Labels: The target labels consist of different types of attacks and normal traffic.
